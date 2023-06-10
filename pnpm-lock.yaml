@@ -5,12 +5,14 @@ specifiers:
   '@types/react': 18.2.9
   '@types/react-dom': 18.2.4
   autoprefixer: 10.4.14
+  clsx: ^1.2.1
   eslint: 8.42.0
   eslint-config-next: 13.4.4
   next: 13.4.4
   postcss: 8.4.24
   react: 18.2.0
   react-dom: 18.2.0
+  react-icons: ^4.9.0
   tailwindcss: 3.3.2
   typescript: 5.1.3
 
@@ -19,12 +21,14 @@ dependencies:
   '@types/react': 18.2.9
   '@types/react-dom': 18.2.4
   autoprefixer: 10.4.14_postcss@8.4.24
+  clsx: 1.2.1
   eslint: 8.42.0
   eslint-config-next: 13.4.4_tizxnkcvjrb4cldxgwq5h3lj5u
   next: 13.4.4_biqbaboplfbrettd7655fr4n2y
   postcss: 8.4.24
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-icons: 4.9.0_react@18.2.0
   tailwindcss: 3.3.2
   typescript: 5.1.3
 
@@ -615,6 +619,11 @@ packages:
 
   /client-only/0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+    dev: false
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: false
 
   /color-convert/2.0.1:
@@ -2207,6 +2216,14 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-icons/4.9.0_react@18.2.0:
+    resolution: {integrity: sha512-ijUnFr//ycebOqujtqtV9PFS7JjhWg0QU6ykURVHuL4cbofvRCf3f6GMn9+fBktEFQOIVZnuAYLZdiyadRQRFg==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-is/16.13.1:
