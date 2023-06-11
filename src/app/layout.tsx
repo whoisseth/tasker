@@ -3,6 +3,9 @@
 import Head from "next/head";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import Container from "./Container";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,13 +21,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <body className={inter.className}>{children}</body>
+      <body>
+        <section className="relative w-screen h-screen overflow-clip bg-dark text-soft-white ">
+          <Navbar />
+          <Container>
+            <Sidebar />
+            <section className="relative flex flex-col justify-between w-full h-full pt-6 pb-16 overflow-y-auto border-2 px-9">
+              {/* <div className="w-full pt-6 pb-16 px-9"> */}
+              {children}
+              {/* </div> */}
+            </section>
+          </Container>
+        </section>
+      </body>
     </html>
   );
 }

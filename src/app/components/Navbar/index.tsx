@@ -1,24 +1,37 @@
 /** @format */
 
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import Logo from "../Logo";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { atom, useAtom } from "jotai";
 
 type Props = {};
+export const navHeightAtom = atom(null);
 
 export default function Navbar({}: Props) {
+  const [height, setHeight] = useAtom(navHeightAtom);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    // @ts-ignore
+    setHeight(ref?.current?.clientHeight);
+  }, [height]);
   return (
-    <header className="bg-dark w-full text-soft-white py-5 px-5 flex justify-between ">
-      <section className="flex gap-10 items-center">
+    <header
+      ref={ref}
+      className="flex justify-between w-full px-5 py-5 shadow-md"
+    >
+      <section className="flex items-center gap-10">
         <Logo />
-        <p className="text-2xl font-serif">Platform Launch</p>
+        <p className="font-serif text-2xl">Platform Launch</p>
       </section>
-      <section className="flex gap-3 items-center">
+      <section className="flex items-center gap-3">
         <button className="flex rounded-full bg-[linear-gradient(90deg,#404040_0%,#463434_50%)] px-5 py-2 text-xl gap-2  items-center hover-effect ">
           <span className="text-2xl">+</span>
           <span>Add new Task </span>
         </button>
-        <button className="hover-effect rounded-full">
+        <button className="rounded-full hover-effect">
           <BsThreeDotsVertical className="text-2xl" />
         </button>
       </section>
