@@ -20,11 +20,13 @@ export default function Navbar({}: Props) {
   return (
     <header
       ref={ref}
-      className="flex justify-between w-full px-5 py-5 shadow-md"
+      className="flex justify-between w-full py-5 pr-5 shadow-md"
     >
-      <section className="flex items-center gap-10">
-        <Logo />
-        <p className="font-serif text-2xl">Platform Launch</p>
+      <section className="flex items-center ">
+        <div className="w-[250px]  px-2">
+          <Logo />
+        </div>
+        <p className="font-serif text-2xl ml-9">Platform Launch</p>
       </section>
       <section className="flex items-center gap-3">
         <button className="flex rounded-full bg-[linear-gradient(90deg,#404040_0%,#463434_50%)] px-5 py-2 text-xl gap-2  items-center hover-effect ">
